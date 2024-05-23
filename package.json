@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "express": "^4.19.2",
+    "express-requests-logger": "^4.0.0",
     "nodemon": "^3.1.0"
   }
 }
