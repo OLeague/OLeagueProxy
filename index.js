@@ -20,7 +20,7 @@ app.get('/api/v1/config/public', async (req, res) => {
     const riotResponse = await fetch(RiotConfigUrl + req.originalUrl);
     const riotJson = await riotResponse.json()
     if(req.query['app'] === 'Riot Client' && !req.query['namespace']){
-        console.log(riotJson["keystone.client.theme.manifestByPatchline"]["default"]);
+        console.log(riotJson["keystone.client.external_publisher.loginPanel.logoByCountryByProduct"]);
         riotJson["keystone.client.theme.manifestByPatchline"]["default"] = "http://localhost:3000/theme";
         console.log("changing theme manifest route to :",riotJson["keystone.client.theme.manifestByPatchline"]["default"]);
      }
